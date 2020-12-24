@@ -5,11 +5,11 @@ import closeIcon from '../../icons/closeIcon.png';
 
 import './InfoBar.css';
 
-const InfoBar = ({ room }) => (
+const InfoBar = ({ room, typing }) => (
   <div className="infoBar">
     <div className="leftInnerContainer">
       <img className="onlineIcon" src={onlineIcon} alt="online icon" />
-      <h3>{room}</h3>
+      <h3>{room}&nbsp;&nbsp;&nbsp;</h3><h4>{typing}</h4>
     </div>
     <div className="rightInnerContainer">
       <a href="/"><img src={closeIcon} alt="close icon" /></a>
