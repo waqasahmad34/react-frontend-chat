@@ -19,14 +19,14 @@ const Message = ({ message: { text, user }, name }) => {
         <div className="messageContainer justifyEnd">
           <p className="sentText pr-10">{trimmedName}</p>
           <div className="messageBox backgroundBlue">
-            { text.includes('uploads/') ? <p className="messageText colorDark"><img style={{width: '200px', height: '200px'}} src={`http://localhost:5000/${text}`} alt="message file"/></p> : <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>}
+            { text.includes('uploads/') ? <p className="messageText colorDark"><img style={{width: '200px', height: '200px'}} src={`https://node-backend-chat.herokuapp.com/${text}`} alt="message file"/></p> : <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>}
           </div>
         </div>
         )
         : (
           <div className="messageContainer justifyStart">
             <div className="messageBox backgroundLight">
-            { text.includes('uploads/') ? <p className="messageText colorDark"><img style={{width: '200px', height: '200px'}} src={`http://localhost:5000/${text}`} alt="message file"/></p> : <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>}
+            { text.includes('uploads/') ? <p className="messageText colorDark"><img style={{width: '200px', height: '200px'}} src={`https://node-backend-chat.herokuapp.com/${text}`} alt="message file"/></p> : <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>}
             </div>
             <p className="sentText pl-10 ">{user}</p>
           </div>
